@@ -34,16 +34,12 @@ const renderHeader = () => {
 
 const renderMain = () => {
     const main = document.createElement('main');
-    main.classList.add('main');
+    main.classList.add('main', 'backgroundImage');
 
     const titleCard = document.createElement('div');
     titleCard.classList.add('titleCard');
 
-    const backgroundImg = document.createElement('div');
-    backgroundImg.classList.add('backgroundImage');
-
     main.appendChild(titleCard);
-    main.appendChild(backgroundImg);
     
     return main;
 }
