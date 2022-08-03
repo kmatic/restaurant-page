@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root {
+    --chicken-color : rgb(224, 147, 3);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Mulish', sans-serif;
+}
+
+#content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header'
+                         'main'
+                         'footer';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px 30px 0px;
+    grid-area: header;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    font-size: 1.5rem;
+}
+
+.main {
+    grid-area: main;
+    color: white;
+}
+
+.titleCard {
+    height: 100%;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--chicken-color);
+    box-shadow: 2px 0px 20px var(--chicken-color);
+}
+
+.titleCard>p {
+    padding: 30px;
+}
+
+.title {
+    background-color: black;
+    font-size: 1.6rem;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.backgroundImage {
+    background: url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: -2;
+}
+
+.footer {
+    grid-area: footer;
+    color: white;
+    width: 500px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-github {
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 5px;
+}
+
+span, .fa-drumstick-bite {
+    color: var(--chicken-color);
+}
+
+.fa-drumstick-bite {
+    font-size: 2.5rem;
+}
