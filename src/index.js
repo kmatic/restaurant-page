@@ -9,7 +9,7 @@ const footer = renderFooter();
 
 const home = renderHome();
 
-main.appendChild(home);
+header.appendChild(home);
 
 content.appendChild(header);
 content.appendChild(main);

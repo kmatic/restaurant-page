@@ -2,44 +2,37 @@ const renderHeader = () => {
     const header = document.createElement('header');
     header.classList.add('header');
 
-    const leftNav = document.createElement('nav');
-    const rightNav = document.createElement('nav');
-
-    leftNav.classList.add('nav-left');
-    rightNav.classList.add('nav-right');
+    const nav = document.createElement('nav');
+    nav.classList.add('nav');
 
     const homeBtn = document.createElement('button');
     const menuBtn = document.createElement('button');
     const contactBtn = document.createElement('button');
-    const rightLogo = document.createElement('i');
 
     homeBtn.classList.add('nav-btn');
     menuBtn.classList.add('nav-btn');
     contactBtn.classList.add('nav-btn');
-    rightLogo.classList.add('fa-solid', 'fa-drumstick-bite');
 
     homeBtn.textContent = 'HOME';
     menuBtn.textContent = 'MENU';
     contactBtn.textContent = 'CONTACT';
 
-    leftNav.appendChild(homeBtn);
-    leftNav.appendChild(menuBtn);
-    leftNav.appendChild(contactBtn);
-    rightNav.appendChild(rightLogo);
-    header.appendChild(leftNav);
-    header.appendChild(rightNav);
+    nav.appendChild(homeBtn);
+    nav.appendChild(menuBtn);
+    nav.appendChild(contactBtn);
+
+    const titleCard = document.createElement('div');
+    titleCard.classList.add('titleCard');
+
+    header.appendChild(nav);
+    header.appendChild(titleCard);
 
     return header;
 }
 
 const renderMain = () => {
     const main = document.createElement('main');
-    main.classList.add('main', 'backgroundImage');
-
-    const titleCard = document.createElement('div');
-    titleCard.classList.add('titleCard');
-
-    main.appendChild(titleCard);
+    main.classList.add('main');
     
     return main;
 }
