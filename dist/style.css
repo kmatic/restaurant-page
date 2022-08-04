@@ -210,3 +210,11 @@ input[type='button']:hover {
 textarea:focus, input[type='email']:focus {
     outline: 0;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
