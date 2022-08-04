@@ -1,9 +1,10 @@
+import { renderTitleCard } from "./website";
+
 const renderHome = () => {
-    const titleCard = document.createElement('div');
-    titleCard.classList.add('titleCard');
+    const titleCard = renderTitleCard();
 
     const home = document.createElement('div');
-    home.classList.add('home');
+    home.classList.add('title');
 
     const homeTitle = document.createElement('h1');
     homeTitle.textContent = 'CHICKEN';

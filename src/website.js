@@ -20,14 +20,16 @@ const renderHeader = () => {
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
     nav.appendChild(contactBtn);
+    header.appendChild(nav);
 
+    return header;
+}
+
+const renderTitleCard = () => {
     const titleCard = document.createElement('div');
     titleCard.classList.add('titleCard');
 
-    header.appendChild(nav);
-    header.appendChild(titleCard);
-
-    return header;
+    return titleCard;
 }
 
 const renderMain = () => {
@@ -58,4 +60,4 @@ const renderFooter = () => {
     return footer;
 }
 
-export { renderHeader, renderMain, renderFooter };
+export { renderHeader, renderTitleCard, renderMain, renderFooter };

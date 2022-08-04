@@ -16,11 +16,6 @@
     display: grid;
     grid-template-rows: 1fr 1fr auto;
     grid-template-columns: 500px 1fr;
-    background: url(./images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
     color: white;
 }
 
@@ -56,9 +51,28 @@
     justify-content: center;
 }
 
+.title {
+    background-color: black;
+    font-size: 1.6rem;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleCard>p {
+    padding: 30px;
+}
+
 .main {
     grid-row: 1 / 4;
     grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .footer {
@@ -86,17 +100,45 @@ span, .fa-drumstick-bite {
 
 /* Home  */
 
-.home {
-    background-color: black;
-    font-size: 1.6rem;
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-}
-
-.titleCard>p {
-    padding: 30px;
-}
 
 /* Menu  */
 
+.menu-container {
+    padding: 40px;
+    width: 800px;
+    height: 500px;
+    background-color: lightgray;
+    opacity: 0.9;
+    box-shadow: 0px 0px 2px lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+}
+
+.menu-item {
+    background-color: gray;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+.menu-item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-info {
+    padding: 10px;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
