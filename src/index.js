@@ -1,20 +1,40 @@
 import { renderHeader, renderMain, renderFooter } from './website';
 import renderHome from './home';
 import { renderMenuItems, renderMenuTitle } from './menu';
+import { renderContact, renderLocation } from './contact';
 
-const content = document.querySelector('#content');
+const loadPage = () => {
+    renderHeader();
+    renderMain();
+    renderFooter();
+    renderHome();
 
-const header = renderHeader();
-const main = renderMain();
-const footer = renderFooter();
+    const header = document.querySelector('.header');
+    const main = document.querySelector('.main');
 
-const menuTitle = renderMenuTitle();
-const menu = renderMenuItems();
+    const home = document.querySelector('#home');
+    const menu = document.querySelector('#menu');
+    const contact = document.querySelector('#contact');
 
-header.appendChild(menuTitle);
-main.appendChild(menu);
+    home.addEventListener('click', () => {
+        main.textContent = '';
+        header.removeChild(header.lastElementChild);
+        renderHome();
+    })
 
+    menu.addEventListener('click', () => {
+        main.textContent = '';
+        header.removeChild(header.lastElementChild);
+        renderMenuItems();
+        renderMenuTitle();
+    })
 
-content.appendChild(header);
-content.appendChild(main);
-content.appendChild(footer);
+    contact.addEventListener('click', () => {
+        main.textContent = '';
+        header.removeChild(header.lastElementChild);
+        renderContact();
+        renderLocation();
+    })
+}
+
+loadPage();

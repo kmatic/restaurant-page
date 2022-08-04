@@ -21,7 +21,9 @@ const renderMenuTitle = () => {
     titleCard.appendChild(menuCard);
     titleCard.appendChild(MenuInfo);
 
-    return titleCard;
+    const header = document.querySelector('.header');
+
+    header.appendChild(titleCard);
 }
 
 const renderMenuItems = () => {
@@ -56,11 +58,13 @@ const renderMenuItems = () => {
                createMenuItem(
                    'Variety',
                       '29.99',
-               'A little bit of everything in one!'
+               'A little bit of everything in one large bucket!'
                )
     );
 
-    return menuContainer;
+    const main = document.querySelector('.main');
+
+    main.appendChild(menuContainer);
 }
 
 const createMenuItem = (name, price, description) => {

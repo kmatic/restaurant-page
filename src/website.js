@@ -1,3 +1,5 @@
+const content = document.querySelector('#content');
+
 const renderHeader = () => {
     const header = document.createElement('header');
     header.classList.add('header');
@@ -13,6 +15,10 @@ const renderHeader = () => {
     menuBtn.classList.add('nav-btn');
     contactBtn.classList.add('nav-btn');
 
+    homeBtn.setAttribute('id', 'home');
+    menuBtn.setAttribute('id', 'menu');
+    contactBtn.setAttribute('id', 'contact');
+
     homeBtn.textContent = 'HOME';
     menuBtn.textContent = 'MENU';
     contactBtn.textContent = 'CONTACT';
@@ -22,7 +28,7 @@ const renderHeader = () => {
     nav.appendChild(contactBtn);
     header.appendChild(nav);
 
-    return header;
+    content.appendChild(header);
 }
 
 const renderTitleCard = () => {
@@ -35,8 +41,8 @@ const renderTitleCard = () => {
 const renderMain = () => {
     const main = document.createElement('main');
     main.classList.add('main');
-    
-    return main;
+
+    content.appendChild(main);
 }
 
 const renderFooter = () => {
@@ -57,7 +63,7 @@ const renderFooter = () => {
     footer.appendChild(author);
     footer.appendChild(githubLink);
 
-    return footer;
+    content.appendChild(footer);
 }
 
 export { renderHeader, renderTitleCard, renderMain, renderFooter };

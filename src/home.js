@@ -26,7 +26,9 @@ const renderHome = () => {
     titleCard.appendChild(home);
     titleCard.appendChild(homeInfo);
 
-    return titleCard;
+    const header = document.querySelector('.header');
+
+    header.appendChild(titleCard);
 }
 
 export default renderHome;
