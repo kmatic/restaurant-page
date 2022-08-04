@@ -31,7 +31,8 @@ const renderContact = () => {
     form.innerHTML = `<h3>Send us an email below and we will get back to you as soon as possible!</h3>
                      <input type='email' placeholder='E-mail'>
                      <textarea name='message' placeholder='Type your message...' id='message' cols='30' rows='10'></textarea>
-                     <input type='button' value='SEND MESSAGE' id='contact-btn'>`;
+                     <input type='button' value='SEND MESSAGE' id='contact-btn'>
+                     <a href="https://www.vecteezy.com/free-vector/fried-chicken">Fried Chicken Vectors by Vecteezy</a>`;
 
     contact.appendChild(timeDiv);
     contact.appendChild(phoneDiv);
