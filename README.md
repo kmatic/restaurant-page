@@ -6,7 +6,7 @@ Simple restaurant webpage dynamically rendered with javascript alone. Implemente
 
 ## Demo
 
-![Live Demo](https://kmatic.github.io/Restaurant-Page/)
+![Live Demo](https://kmatic.github.io/restaurant-page/)
 
 ## TO-DO
 
